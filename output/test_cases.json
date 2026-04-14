@@ -1,0 +1,52 @@
+[
+  {
+    "test_case_id": "TC-001",
+    "requirement_id": "REQ-117.130-001A",
+    "description": "(1) Conduct hazard analysis."
+  },
+  {
+    "test_case_id": "TC-002",
+    "requirement_id": "REQ-117.130-001B",
+    "description": "Identify known hazards."
+  },
+  {
+    "test_case_id": "TC-003",
+    "requirement_id": "REQ-117.130-001C",
+    "description": "Identify reasonably foreseeable hazards."
+  },
+  {
+    "test_case_id": "TC-004",
+    "requirement_id": "REQ-117.130-001D",
+    "description": "Evaluate hazards using data, experience, reports."
+  },
+  {
+    "test_case_id": "TC-005",
+    "requirement_id": "REQ-117.130-001F",
+    "description": "(2) Hazard analysis must be written."
+  },
+  {
+    "test_case_id": "TC-006",
+    "requirement_id": "REQ-117.130-002A",
+    "description": "Occur naturally."
+  },
+  {
+    "test_case_id": "TC-007",
+    "requirement_id": "REQ-117.130-002B",
+    "description": "Unintentionally introduced."
+  },
+  {
+    "test_case_id": "TC-008",
+    "requirement_id": "REQ-117.130-002C",
+    "description": "Intentionally introduced for economic gain."
+  },
+  {
+    "test_case_id": "TC-009",
+    "requirement_id": "REQ-117.130-003A",
+    "description": "(1) Evaluate identified hazards."
+  },
+  {
+    "test_case_id": "TC-010",
+    "requirement_id": "REQ-117.130-003B",
+    "description": "(2) Consider effects on safety of finished food."
+  }
+]
