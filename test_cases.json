@@ -2,26 +2,36 @@
   {
     "test_case_id": "TC-001",
     "requirement_id": "REQ-117.130-001A",
-    "description": "Verify that a hazard analysis is conducted for each type of food."
+    "description": "Verify that a hazard analysis is conducted for each type of food.",
+    "input_data": "Food safety plan and hazard analysis records.",
+    "expected_output": "Hazard analysis is present and completed for the food."
   },
   {
     "test_case_id": "TC-002",
     "requirement_id": "REQ-117.130-001B",
-    "description": "Verify that the hazard analysis is documented."
+    "description": "Verify that the hazard analysis is documented.",
+    "input_data": "Hazard analysis documentation from the facility.",
+    "expected_output": "Hazard analysis exists in written or recorded form."
   },
   {
     "test_case_id": "TC-003",
     "requirement_id": "REQ-117.130-002A",
-    "description": "Verify that biological hazards are identified and considered."
+    "description": "Verify that biological hazards are identified and considered.",
+    "input_data": "Hazard analysis listing biological hazards.",
+    "expected_output": "Biological hazards are identified and evaluated."
   },
   {
     "test_case_id": "TC-004",
     "requirement_id": "REQ-117.130-002B",
-    "description": "Verify that chemical hazards are identified and considered."
+    "description": "Verify that chemical hazards are identified and considered.",
+    "input_data": "Hazard analysis listing chemical hazards.",
+    "expected_output": "Chemical hazards are identified and evaluated."
   },
   {
     "test_case_id": "TC-005",
     "requirement_id": "REQ-117.130-003A",
-    "description": "Verify that severity and probability of hazards are assessed."
+    "description": "Verify that severity and probability of hazards are assessed.",
+    "input_data": "Completed hazard evaluation section in safety plan.",
+    "expected_output": "Severity and probability of hazards are documented."
   }
 ]
