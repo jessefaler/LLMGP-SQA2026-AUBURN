@@ -1,0 +1,70 @@
+name: CFR V&V CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Remove old forensic log
+        run: rm -f forensick_log.jsonl
+
+      - name: Run verification
+        run: python scripts/verification.py
+
+      - name: Run validation
+        run: python scripts/validation.py
+
+      - name: Record CI success
+        if: success()
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+
+          record = {
+              "timestamp": datetime.utcnow().isoformat() + "Z",
+              "event_type": "ci_status",
+              "status": "pass",
+              "details": {"job": "verify-validate"}
+          }
+
+          with open("forensick_log.jsonl", "a") as f:
+              f.write(json.dumps(record) + "\n")
+          PY
+
+      - name: Record CI failure
+        if: failure()
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+
+          record = {
+              "timestamp": datetime.utcnow().isoformat() + "Z",
+              "event_type": "ci_status",
+              "status": "fail",
+              "details": {"job": "verify-validate"}
+          }
+
+          with open("forensick_log.jsonl", "a") as f:
+              f.write(json.dumps(record) + "\n")
+          PY
+
+      - name: Upload forensic log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forensick-log
+          path: forensick_log.jsonl
